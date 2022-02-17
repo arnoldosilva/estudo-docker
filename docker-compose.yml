@@ -12,7 +12,6 @@ services:
       context: .
       dockerfile: "dockerfile.dev"
     volumes:
-      - test-volume:/app/node_modules
       - test-volume:/app
     command: ["npm","run","test"]
 volumes:
