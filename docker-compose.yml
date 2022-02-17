@@ -1,9 +1,7 @@
 version: '3'
 services:
   web:
-    build:
-      context: .
-      dockerfile: "dockerfile.dev"
+    build: .
     ports:
       - "3000:3000"
     volumes:
