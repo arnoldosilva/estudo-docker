@@ -5,15 +5,17 @@ services:
     ports:
       - "4000:80"
     volumes:
-      - estudo-docker-volume:/app/node_modules
-      - estudo-docker-volume:/app
+      - www-volume:/app/node_modules
+      - www-volume:/app
   tests:
     build:
       context: .
       dockerfile: "dockerfile.dev"
     volumes:
-      - .:/app/node_modules
-      - .:/app
+      - test-volume:/app/node_modules
+      - test-volume:/app
     command: ["npm","run","test"]
 volumes:
-  estudo-docker-volume:
+  www-volume:
+  test-volume:
+
