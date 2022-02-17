@@ -1,4 +1,4 @@
-version: '3'
+version: '3.9'
 services:
   web:
     build: .
@@ -15,6 +15,5 @@ services:
       - estudo-docker-volume:/app/node_modules
       - estudo-docker-volume:/app
     command: ["npm","run","test"]
-  
   volumes:
     estudo-docker-volume:
